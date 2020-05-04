@@ -57,5 +57,6 @@ app.get("/insult", function (req, res) {
 
 app.use("/public", express.static("./public"));
 
-app.listen(1234);
-console.log("listening on http://localhost:1234");
+const port = process.env.PORT || 3000;
+app.listen(port);
+console.log(`listening on http://localhost:${port}`);
